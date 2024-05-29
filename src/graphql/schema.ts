@@ -17,6 +17,11 @@ const schema = buildSchema(/* GraphQL */ `
     UserId: Int!
   }
 
+  input CreateUserInput {
+    firstName: String!
+    lastName: String
+  }
+
   type Query {
     users: [User]
     user(id: Int!): User
@@ -27,6 +32,7 @@ const schema = buildSchema(/* GraphQL */ `
 
   type Mutation {
     createProject(input: CreateProjectInput!): Project
+    createUser(input: CreateUserInput!): User
   }
 `);
 

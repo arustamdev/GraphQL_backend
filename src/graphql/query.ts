@@ -2,7 +2,12 @@
 
 import User from "../models/User";
 import Project from "../models/Project";
-import { UserArgs, ProjectArgs, CreateProjectArgs } from "./types";
+import {
+  UserArgs,
+  ProjectArgs,
+  CreateProjectArgs,
+  CreateUserArgs,
+} from "./types";
 import { Association } from "sequelize";
 
 const root = {
@@ -23,6 +28,9 @@ const root = {
     const User = await project.getUser();
     project.User = User;
     return project;
+  },
+  async createUser({ input: { firstName, lastName } }: CreateUserArgs) {
+    return await User.create({ firstName, lastName });
   },
 };
 

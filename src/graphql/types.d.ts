@@ -10,3 +10,18 @@ export type CreateProjectArgs = {
     UserId: number;
   };
 };
+export type CreateUserArgs = {
+  input: {
+    firstName: string;
+    lastName?: string;
+  };
+};
+export type User = {
+  firstName: string;
+  lastName?: string;
+  Project: Project[];
+};
+export type Project = {
+  name: string;
+  User: User;
+};
