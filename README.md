@@ -40,4 +40,4 @@ npm run start
 ```
 And that's it!
 Your app is running on http://localhost:3000
-GraphQl endpoint is at http://localhost:3000/graphql
+GraphQL endpoint is at http://localhost:3000/graphql
