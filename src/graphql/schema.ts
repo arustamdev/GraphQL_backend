@@ -2,12 +2,14 @@ import { buildSchema } from "graphql";
 
 const schema = buildSchema(/* GraphQL */ `
   type User {
+    id: Int!
     firstName: String!
     lastName: String
     Projects: [Project]
   }
 
   type Project {
+    id: Int!
     name: String!
     User: User
   }
